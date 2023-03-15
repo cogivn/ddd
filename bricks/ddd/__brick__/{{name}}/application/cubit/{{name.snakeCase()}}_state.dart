@@ -19,17 +19,6 @@ class {{name.pascalCase()}}State with _${{name.pascalCase()}}State {
     ApiError? error,
   }) = _{{name.pascalCase()}}State;
 
-  {{name.pascalCase()}}State get loading => copyWith(status: {{name.pascalCase()}}Status.loading);
-
-  {{name.pascalCase()}}State onError(ApiError error) => copyWith(
-        status: {{name.pascalCase()}}Status.error,
-        error: error,
-      );
-
-  {{name.pascalCase()}}State onLoaded(I{{name.pascalCase()}} data) => copyWith(
-        status: {{name.pascalCase()}}Status.loaded,
-        data: data,
-      );
 }
 
 extension {{name.pascalCase()}}StateX on {{name.pascalCase()}}State {
