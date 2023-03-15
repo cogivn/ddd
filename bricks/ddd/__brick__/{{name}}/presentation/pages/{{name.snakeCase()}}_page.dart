@@ -11,10 +11,10 @@ class {{name.pascalCase()}}Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context)=> getIt<NewsfeedCubit>(),
+      create: (context)=> getIt<{{name.pascalCase()}}Cubit>(),
       child: Scaffold(
         appBar: AppBar(),
-        body: const NewsfeedBody(),
+        body: const {{name.pascalCase()}}Body(),
       ),
     );
   }
