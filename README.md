@@ -2,8 +2,9 @@
 
 [![Powered by Mason](https://img.shields.io/endpoint?url=https%3A%2F%2Ftinyurl.com%2Fmason-badge)](https://github.com/felangel/mason)
 
-The purpose of this library is to simplify the implementation of DDD architecture logic, making it easier to test and reuse.<br/>
-Thank you Mason team created a awesome library.
+
+Thanks to the Mason team for creating a great library.<br/>
+The purpose of this library is to simplify the implementation of DDD architecture logic, making it easier to test and reuse.
 
 ## Getting Started 🚀
 
