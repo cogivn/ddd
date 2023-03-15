@@ -22,7 +22,7 @@ Open the terminal and navigate to the directory where you want Mason to generate
 ```gradle
 mason init
 ```
-Running mason init generates a mason.yaml so that you can get started immediately.
+Running mason init will generate a `mason.yaml` so you can get started right away. You can copy the file content below and paste it in your file
 ```dart
 # Register bricks which can be consumed via the Mason CLI.
 # https://github.com/felangel/mason
