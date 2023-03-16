@@ -76,9 +76,15 @@ bricks:
      git:
        url: https://github.com/cogivn/ddd.git
        path: bricks/ddd
-# From brickhub.dev
-```mason add ddd```
 ```
+
+ Or, you also install it from [brickhub.dev](https://brickhub.dev/bricks/ddd/0.1.0+1) via command:
+```dart
+mason add ddd 
+//or if you want to add it to global, then:
+mason add -g ddd
+```
+
 Next, get all bricks registered in mason.yaml via:
 ```dart
 mason get
