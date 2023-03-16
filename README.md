@@ -6,7 +6,7 @@
 Thanks to the Mason team for creating a great library.<br/>
 The purpose of this library is to simplify the implementation of DDD architecture logic, making it easier to test and reuse.
 
-This script is designed for https://github.com/cogivn/flutter source code(branch=develop). You should use the above source code for full features and compatibility with the source code.
+This script is designed for [https://github.com/cogivn/flutter](https://github.com/cogivn/flutter/tree/develop) source code(branch=develop). You should use the above source code for full features and compatibility with the source code.
 
 If you want to configure an existing project manually, consider adding the following libraries:
  - enum_generator: https://github.com/cogivn/enum-generator
