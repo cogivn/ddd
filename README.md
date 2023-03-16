@@ -61,7 +61,9 @@ mason init
 ```
 Running mason init will generate a `mason.yaml` so you can get started right away. <br/> You can copy the file content below and paste it in your file
 ```dart
-# Register bricks which can be consumed via the Mason CLI.
+# Register 
+# From git
+# bricks which can be consumed via the Mason CLI.
 # https://github.com/felangel/mason
 bricks:
   # Sample Brick
@@ -74,7 +76,8 @@ bricks:
      git:
        url: https://github.com/cogivn/ddd.git
        path: bricks/ddd
-
+# From brickhub.dev
+```mason add ddd```
 ```
 Next, get all bricks registered in mason.yaml via:
 ```dart
