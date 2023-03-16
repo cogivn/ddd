@@ -6,6 +6,42 @@
 Thanks to the Mason team for creating a great library.<br/>
 The purpose of this library is to simplify the implementation of DDD architecture logic, making it easier to test and reuse.
 
+This script is designed for https://github.com/cogivn/flutter source code. You should use the above source code for full features and compatibility with the source code.
+
+If you want to configure an existing project manually, consider adding the following libraries:
+ - enum_generator: https://github.com/cogivn/enum-generator
+ - injectable: https://pub.dev/packages/injectable
+ 
+and environment management file:
+
+```dart
+import 'package:flutter_config_plus/flutter_config_plus.dart';
+import 'package:injectable/injectable.dart';
+
+typedef FlutterConfig = FlutterConfigPlus;
+
+class AppEnvironment {
+  static setup() async {
+    await FlutterConfig.loadEnvVariables();
+  }
+
+  static final flavor = FlutterConfig.get('FLAVOR');
+  static final packageName = FlutterConfig.get('PACKAGE_NAME');
+  static final bundleId = FlutterConfig.get('BUNDLE_ID');
+  static final apiUrl = FlutterConfig.get('API_URL');
+  static final appName = FlutterConfig.get('APP_NAME');
+
+  static const alpha = 'ALPHA';
+  static const dev = 'DEV';
+  static const prg = 'PRG';
+  static const uat = 'UAT';
+  static const prd = 'PRD';
+
+  static const environments = [dev, prg, uat, prd];
+}
+const alpha = Environment(AppEnvironment.alpha);
+```
+
 ## Getting Started 🚀
 
 ### Installation 
