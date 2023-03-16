@@ -11,6 +11,7 @@ This script is designed for https://github.com/cogivn/flutter source code. You s
 If you want to configure an existing project manually, consider adding the following libraries:
  - enum_generator: https://github.com/cogivn/enum-generator
  - injectable: https://pub.dev/packages/injectable
+ - flutter_config_plus: https://pub.dev/packages/flutter_config_plus
  
 and environment management file:
 
