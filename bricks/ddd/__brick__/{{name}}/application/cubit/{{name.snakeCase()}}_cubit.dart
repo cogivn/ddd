@@ -3,9 +3,9 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:enum_annotation/enum_annotation.dart';
 import 'package:injectable/injectable.dart';
 
+import '../../../../common/mixin/cancelable_base_bloc.dart';
 import '../../../../core/infrastructure/datasources/remote/api/base/api_error.dart';
 import '../../domain/entities/{{name.snakeCase()}}.dart';
-import '../../../../common/utils/cancelable_base_bloc.dart';
 import '../../domain/interfaces/{{name.snakeCase()}}_interface.dart';
 
 part '{{name.snakeCase()}}_state.dart';
