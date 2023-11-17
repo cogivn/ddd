@@ -21,8 +21,8 @@ class {{name.pascalCase()}}Cubit extends Cubit<{{name.pascalCase()}}State> with 
     emit(state.loading);
     final response = await _repository.getById(1, token: cancelToken);
     response.fold(
-      (l) => emit(state.onError(l)),
-      (r) => emit(state.onLoaded(r)),
+      (result) => emit(state.onLoaded(result)),
+      (error) => emit(state.onError(error)),
     );
   }
 }
