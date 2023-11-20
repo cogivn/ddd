@@ -1,6 +1,6 @@
 import 'package:injectable/injectable.dart';
-import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
+import 'package:result_dart/result_dart.dart';
 
 import '../../domain/interfaces/{{name.snakeCase()}}_interface.dart';
 import '../../../../common/utils/app_environment.dart';
@@ -12,7 +12,7 @@ import '../../../{{name.snakeCase()}}/infrastructure/models/{{name.snakeCase()}}
 @LazySingleton(as: I{{name.pascalCase()}}Repository)
 class {{name.pascalCase()}}MockupRepository implements I{{name.pascalCase()}}Repository {
   @override
-  Future<Either<ApiError, I{{name.pascalCase()}}>> getById(int id, {CancelToken? token}) async {
-    return right(const {{name.pascalCase()}}Model());
+  Future<Result<I{{name.pascalCase()}},ApiError>> getById(int id, {CancelToken? token}) async {
+    return Result.success(const {{name.pascalCase()}}Model());
   }
 }
