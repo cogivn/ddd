@@ -6,7 +6,7 @@ import 'package:injectable/injectable.dart';
 import '../../../../common/mixin/cancelable_base_bloc.dart';
 import '../../../../core/infrastructure/datasources/remote/api/base/api_error.dart';
 import '../../domain/entities/{{name.snakeCase()}}.dart';
-import '../../domain/interfaces/{{name.snakeCase()}}_interface.dart';
+import '../../domain/repositories/{{name.snakeCase()}}_repository.dart';
 
 part '{{name.snakeCase()}}_state.dart';
 part '{{name.snakeCase()}}_cubit.freezed.dart';
