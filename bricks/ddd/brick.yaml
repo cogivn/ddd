@@ -1,16 +1,16 @@
 name: ddd
-description: ddd teamplate
+description: Domain-driven design template
 repository: https://github.com/cogivn/ddd.git
 
 # The following defines the version and build number for your brick.
 # A version number is three numbers separated by dots, like 1.2.34
 # followed by an optional build number (separated by a +).
-version: 0.1.0+3
+version: 0.2.0+4
 
 # The following defines the environment for the current brick.
 # It includes the version of mason that the brick requires.
 environment:
-  mason: ">=0.1.0-dev.41 <0.1.0"
+  mason: ">=0.1.0-dev.53 <0.1.0"
 
 # Variables specify dynamic values that your brick depends on.
 # Zero or more variables can be specified for a given brick.
@@ -25,6 +25,6 @@ vars:
   name:
     type: string
     description: ddd
-    default: corgivn
+    default: newsfeed
     prompt: ddd
   
