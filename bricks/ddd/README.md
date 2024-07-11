@@ -14,7 +14,7 @@ mason make ddd -name modulename -o lib/src/parent_module
 
 ## Contributing
 
-We welcome contributions from the corgivn community! If you find any issues or have suggestions for improvements, please feel free to raise an issue or submit a pull request.
+We welcome contributions from the cogivn community! If you find any issues or have suggestions for improvements, please feel free to raise an issue or submit a pull request.
 
 ## License
 

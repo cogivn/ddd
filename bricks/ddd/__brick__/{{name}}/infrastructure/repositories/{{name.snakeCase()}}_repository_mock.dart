@@ -9,10 +9,11 @@ import '../../../{{name.snakeCase()}}/domain/entities/{{name.snakeCase()}}.dart'
 import '../../../{{name.snakeCase()}}/infrastructure/models/{{name.snakeCase()}}_model.dart';
 
 @alpha
-@LazySingleton(as: I{{name.pascalCase()}}Repository)
-class {{name.pascalCase()}}MockupRepository implements I{{name.pascalCase()}}Repository {
+@LazySingleton(as: {{name.pascalCase()}}Repository)
+class {{name.pascalCase()}}RepositoryMock implements {{name.pascalCase()}}Repository {
   @override
   Future<Result<I{{name.pascalCase()}},ApiError>> getById(int id, {CancelToken? token}) async {
-    return Result.success(const {{name.pascalCase()}}Model());
+    // TODO: implement getById
+    throw UnimplementedError();
   }
 }
