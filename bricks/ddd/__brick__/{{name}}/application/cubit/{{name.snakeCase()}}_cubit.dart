@@ -14,7 +14,7 @@ part '{{name.snakeCase()}}_cubit.g.dart';
 
 @injectable
 class {{name.pascalCase()}}Cubit extends Cubit<{{name.pascalCase()}}State> with CancelableBaseBloc {
-  final I{{name.pascalCase()}}Repository _repository;
+  final {{name.pascalCase()}}Repository _repository;
   {{name.pascalCase()}}Cubit(this._repository) : super(const {{name.pascalCase()}}State());
 
   get() async {
