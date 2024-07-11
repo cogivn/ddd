@@ -1,0 +1,22 @@
+name: Publish the ddd bricks to Brickhub
+
+on:
+  push:
+    # Pattern matched against refs/tags
+    tags:        
+      - '**'  # Push events to every tag including hierarchical tags like v1.0/beta
+
+jobs:
+  ddd:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Publish the ddd bricks
+        uses: abitofevrything/publish-mason-brick@main
+        with:
+          path: bricks/ddd
+          dryRun: true
+          email: ${{ secrets.EMAIL }}
+          password: ${{ secrets.PWD }}
