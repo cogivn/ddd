@@ -8,17 +8,15 @@ enum {{name.pascalCase()}}Status {
   loaded;
 }
 
-
 @freezed
 class {{name.pascalCase()}}State with _${{name.pascalCase()}}State {
   const {{name.pascalCase()}}State._();
 
   const factory {{name.pascalCase()}}State({
     @Default({{name.pascalCase()}}Status.initial) {{name.pascalCase()}}Status status,
-    I{{name.pascalCase()}}? data,
+    {{name.pascalCase()}}? data,
     ApiError? error,
   }) = _{{name.pascalCase()}}State;
-
 }
 
 extension {{name.pascalCase()}}StateX on {{name.pascalCase()}}State {
@@ -29,7 +27,7 @@ extension {{name.pascalCase()}}StateX on {{name.pascalCase()}}State {
         error: error,
       );
 
-  {{name.pascalCase()}}State onLoaded(I{{name.pascalCase()}} data) => copyWith(
+  {{name.pascalCase()}}State onLoaded({{name.pascalCase()}} data) => copyWith(
         status: {{name.pascalCase()}}Status.loaded,
         data: data,
       );

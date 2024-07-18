@@ -13,7 +13,7 @@ import '../../../{{name.snakeCase()}}/domain/entities/{{name.snakeCase()}}.dart'
 )
 class {{name.pascalCase()}}RepositoryImpl implements {{name.pascalCase()}}Repository {
   @override
-  Future<Result<I{{name.pascalCase()}},ApiError>> getById(int id, {CancelToken? token}) async {
+  Future<Result<{{name.pascalCase()}}, ApiError>> getById(int id, {CancelToken? token}) async {
     // TODO: implement getById
     throw UnimplementedError();
   }
