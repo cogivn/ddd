@@ -11,7 +11,7 @@ import '../../domain/repositories/{{name.snakeCase()}}_repository.dart';
 part '{{name.snakeCase()}}_state.dart';
 part '{{name.snakeCase()}}_cubit.freezed.dart';
 
-{{#is_riverpod}}final {{name.camelCase()}}Provider = BlocProvider<{{name.pascalCase()}}Cubit, {{name.pascalCase()}}State>((_) {
+{{#is_riverpod}}final {{name.camelCase()}}Provider = AutoDisposeBlocProvider<{{name.pascalCase()}}Cubit, {{name.pascalCase()}}State>((_) {
   return getIt<{{name.pascalCase()}}Cubit>();
 });{{/is_riverpod}}
 
