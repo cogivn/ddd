@@ -10,7 +10,7 @@ version: 0.1.5+8
 # The following defines the environment for the current brick.
 # It includes the version of mason that the brick requires.
 environment:
-  mason: ">=0.1.0-dev.53 <0.1.0"
+  mason: ">=0.1.0-dev.53 <0.2.0"
 
 # Variables specify dynamic values that your brick depends on.
 # Zero or more variables can be specified for a given brick.
@@ -30,9 +30,9 @@ vars:
 
   provider:
     type: enum
-    description: The provider option. 'bloc' and 'provider' is supported and 'bloc' provider by default
+    description: The provider option. 'bloc', 'riverbloc', and 'riverpod' are supported
     values:
       - bloc
+      - riverbloc
       - riverpod
     prompt: Select the provider for your application
-  

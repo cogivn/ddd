@@ -1,0 +1,33 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:injectable/injectable.dart';
+{{#is_bloc}}import 'package:bloc/bloc.dart';{{/is_bloc}}
+{{#is_riverbloc}}import 'package:riverbloc/riverbloc.dart';
+import '../../../../common/utils/getit_utils.dart';{{/is_riverbloc}}
+
+import '../../../../common/mixin/cancelable_base_bloc.dart';
+import '../../../../core/infrastructure/datasources/remote/api/base/api_error.dart';
+import '../../domain/entities/{{name.snakeCase()}}.dart';
+import '../../domain/repositories/{{name.snakeCase()}}_repository.dart';
+
+part '{{name.snakeCase()}}_state.dart';
+part '{{name.snakeCase()}}_cubit.freezed.dart';
+
+{{#is_riverbloc}}final {{name.camelCase()}}Provider = AutoDisposeBlocProvider<{{name.pascalCase()}}Cubit, {{name.pascalCase()}}State>((_) {
+  return getIt<{{name.pascalCase()}}Cubit>();
+});{{/is_riverbloc}}
+
+@injectable
+class {{name.pascalCase()}}Cubit extends Cubit<{{name.pascalCase()}}State> with CancelableBaseBloc {
+  final {{name.pascalCase()}}Repository _repository;
+
+  {{name.pascalCase()}}Cubit(this._repository) : super(const {{name.pascalCase()}}State());
+
+  get() async {
+    emit(state.loading);
+    final response = await _repository.getById(1, token: cancelToken);
+    response.fold(
+      (result) => emit(state.onLoaded(result)),
+      (error) => emit(state.onError(error)),
+    );
+  }
+}
