@@ -2,7 +2,7 @@ part of '{{name.snakeCase()}}_notifier.dart';
 
 @frx
 @freezed
-class {{name.pascalCase()}}Status with _${{name.pascalCase()}}Status {
+abstract class {{name.pascalCase()}}Status with _${{name.pascalCase()}}Status {
   const factory {{name.pascalCase()}}Status.initial() = _InitialStatus;
   const factory {{name.pascalCase()}}Status.loading() = _LoadingStatus;
   const factory {{name.pascalCase()}}Status.error(ApiError err) = _ErrorStatus;
@@ -10,7 +10,7 @@ class {{name.pascalCase()}}Status with _${{name.pascalCase()}}Status {
 }
 
 @freezed
-class {{name.pascalCase()}}State with _${{name.pascalCase()}}State {
+abstract class {{name.pascalCase()}}State with _${{name.pascalCase()}}State {
   const {{name.pascalCase()}}State._();
 
   const factory {{name.pascalCase()}}State({

@@ -1,3 +1,10 @@
+# 0.1.7
+
+- Fixed type naming in Riverpod state management implementation
+- Enhanced error handling in notifier state extensions
+- Improved template consistency across different state management solutions
+- Updated documentation for better clarity on implementation details
+
 # 0.1.6
 
 - Added improved support for Riverpod state management
