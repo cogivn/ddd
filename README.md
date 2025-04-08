@@ -140,6 +140,10 @@ You can also specify parameters directly:
 mason make ddd --name newsfeed --provider riverpod
 ```
 
+Available arguments:
+- `--name`: The name of your module (required)
+- `--provider`: The state management approach to use (`bloc`, `riverbloc`, or `riverpod`)
+
 ### Custom Output Directory
 
 Specify a custom output directory with the `-o` option:
