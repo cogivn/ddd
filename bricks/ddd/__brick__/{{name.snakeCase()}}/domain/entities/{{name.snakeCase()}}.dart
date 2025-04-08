@@ -1,3 +1,3 @@
-abstract class {{name.pascalCase()}} {
+abstract interface class {{name.pascalCase()}} {
   int get id;
 }

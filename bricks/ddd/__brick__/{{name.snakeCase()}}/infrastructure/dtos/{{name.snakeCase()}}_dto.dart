@@ -7,7 +7,7 @@ part '{{name.snakeCase()}}_dto.freezed.dart';
 part '{{name.snakeCase()}}_dto.g.dart';
 
 @freezed
-class {{name.pascalCase()}}Dto with _${{name.pascalCase()}}Dto implements {{name.pascalCase()}} {
+abstract class {{name.pascalCase()}}Dto with _${{name.pascalCase()}}Dto implements {{name.pascalCase()}} {
   const factory {{name.pascalCase()}}Dto({
     @JsonKey(name: 'id') @Default(-1) int id,
   }) = _{{name.pascalCase()}}Dto;

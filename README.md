@@ -33,6 +33,7 @@ If configuring an existing project manually, add these dependencies:
 - [enum_generator](https://github.com/cogivn/enum-generator)
 - [injectable](https://pub.dev/packages/injectable)
 - [flutter_config_plus](https://pub.dev/packages/flutter_config_plus)
+- [result_dart](https://pub.dev/packages/result_dart)
 
 You'll also need an environment management file:
 
