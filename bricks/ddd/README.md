@@ -1,21 +1,75 @@
-# [ddd] Brick
+# Domain-Driven Design (DDD) Brick
 
-This brick is designed for [purpose of brick]. It is compatible with [specify platform/technology if applicable] and can be used for [specific use cases].
+A Mason brick for quickly scaffolding Domain-Driven Design modules in Flutter applications.
 
-To install this brick, you can download it from the [repository/website where it is hosted] and then follow the installation instructions below.
+## Features
+
+- Generates complete DDD folder structure with all required layers
+- Supports three state management approaches:
+  - BLoC/Cubit
+  - RiverBLoC
+  - Riverpod
+- Creates entity classes, repository interfaces and implementations
+- Sets up DTOs with freezed for JSON serialization
+- Configures state management boilerplate based on your chosen approach
+- Provides consistent error handling with API error responses
 
 ## Installation
 
+To install this brick:
+
+```bash
 mason add ddd
+```
+
+Or add it directly to your `mason.yaml`:
+
+```yaml
+bricks:
+  ddd:
+    git:
+      url: https://github.com/cogivn/ddd.git
+      path: bricks/ddd
+```
 
 ## Usage
 
-mason make ddd -name modulename -o lib/src/parent_module
+Generate a new DDD module with:
+
+```bash
+mason make ddd --name yourModuleName --provider bloc
+```
+
+Available provider options:
+- `bloc` - Uses traditional BLoC pattern with Cubit
+- `riverbloc` - Uses RiverBLoC (BLoC with Riverpod integration)
+- `riverpod` - Uses pure Riverpod with notifiers
+
+## Generated Structure
+
+```
+your_module/
+├── application/          # State management layer
+│   └── your_module_cubit/ or your_module_notifier/
+├── domain/               # Business logic & rules
+│   ├── entities/
+│   └── repositories/
+├── infrastructure/        # Implementation details
+│   ├── dtos/
+│   └── repositories/
+└── presentation/         # UI layer
+    ├── pages/
+    └── widgets/
+```
+
+## Requirements
+
+For full functionality, your project should include:
+- Injectable for dependency injection
+- Freezed for immutable state
+- Result_dart for functional error handling
+- Appropriate state management libraries based on your choice
 
 ## Contributing
 
-We welcome contributions from the cogivn community! If you find any issues or have suggestions for improvements, please feel free to raise an issue or submit a pull request.
-
-## License
-
-will be update later
+Contributions are welcome! Feel free to open issues or submit pull requests.
