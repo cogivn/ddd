@@ -1,0 +1,13 @@
+{
+  "auth_phone_empty": "電話號碼不能為空",
+  "auth_password_empty": "密碼不能為空",
+  "auth_phone_invalid_format": "電話號碼格式無效",
+  "auth_phone_label": "電話號碼",
+  "auth_phone_hint": "請輸入您的電話號碼",
+  "auth_password_label": "密碼",
+  "auth_password_hint": "請輸入您的密碼",
+  "auth_forgot_password": "忘記密碼？",
+  "auth_login_button": "登錄",
+  "auth_login_title": "歡迎回來",
+  "auth_signup_prompt": "沒有賬號？立即註冊"
+} 

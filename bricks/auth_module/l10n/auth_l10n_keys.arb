@@ -1,0 +1,13 @@
+{
+  "auth_phone_empty": "Phone number cannot be empty",
+  "auth_password_empty": "Password cannot be empty",
+  "auth_phone_invalid_format": "Invalid phone number format",
+  "auth_phone_label": "Phone Number",
+  "auth_phone_hint": "Enter your phone number",
+  "auth_password_label": "Password",
+  "auth_password_hint": "Enter your password",
+  "auth_forgot_password": "Forgot Password?",
+  "auth_login_button": "Login",
+  "auth_login_title": "Welcome Back",
+  "auth_signup_prompt": "Don't have an account? Sign up now"
+} 

@@ -1,0 +1,13 @@
+{
+  "auth_phone_empty": "电话号码不能为空",
+  "auth_password_empty": "密码不能为空",
+  "auth_phone_invalid_format": "电话号码格式无效",
+  "auth_phone_label": "电话号码",
+  "auth_phone_hint": "请输入您的电话号码",
+  "auth_password_label": "密码",
+  "auth_password_hint": "请输入您的密码",
+  "auth_forgot_password": "忘记密码？",
+  "auth_login_button": "登录",
+  "auth_login_title": "欢迎回来",
+  "auth_signup_prompt": "没有账号？立即注册"
+} 

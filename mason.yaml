@@ -3,3 +3,5 @@
 bricks:
   ddd:
     path: bricks/ddd
+  auth_module:
+    path: bricks/auth_module
