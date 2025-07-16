@@ -18,8 +18,7 @@ abstract class UserDTO with _$UserDTO implements User {
 
   factory UserDTO.fromJson(dynamic json) => _$UserDTOFromJson(json);
 
-  @override
-  User fromJson(Map<String, dynamic> json) {
-    return UserDTO.fromJson(json);
+  bool isValid() {
+    return id.isNotEmpty && name.isNotEmpty && email.isNotEmpty;
   }
 }

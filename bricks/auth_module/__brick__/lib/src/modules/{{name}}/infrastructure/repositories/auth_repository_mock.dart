@@ -62,7 +62,7 @@ class AuthRepositoryMock implements AuthRepository {
     // Follows MCP-ddd-infrastructure-layer: Mock storage operations
     logger.i('[AuthRepositoryMock] Mock saving user data '
         'to storage for user: ${user.id}');
-    await Storage.setUser(user);
+    await Storage.setUser(user.toJson());
   }
 
   @override
@@ -78,21 +78,21 @@ class AuthRepositoryMock implements AuthRepository {
     // methods in infrastructure layer
     logger.i('[AuthRepositoryMock] Checking mock login status');
 
-    final user = Storage.user;
+    final user = UserDTO.fromJson(Storage.user);
     final token = await Storage.accessToken;
 
     // Both user data and access token must exist
-    if (user != null && token != null && token.isNotEmpty) {
+    if (user.isValid() && token != null && token.isNotEmpty) {
       logger.i('[AuthRepositoryMock] Mock user is logged in');
       return true;
     }
 
     // If only one exists, clear it for consistency
-    if (user != null && (token == null || token.isEmpty)) {
+    if (user.isValid() && (token == null || token.isEmpty)) {
       logger.w('[AuthRepositoryMock] Mock user data exists but token'
           ' missing, clearing session');
       await _authService.logout();
-    } else if ((user == null) && token != null && token.isNotEmpty) {
+    } else if ((user.isValid()) && token != null && token.isNotEmpty) {
       logger.w('[AuthRepositoryMock] Mock token exists but user'
           ' data missing, clearing session');
       await _authService.logout();
@@ -110,7 +110,7 @@ class AuthRepositoryMock implements AuthRepository {
     if (!await isLoggedIn()) {
       return null;
     }
-    return Storage.user;
+    return UserDTO.fromJson(Storage.user);
   }
 
   @override
@@ -137,7 +137,7 @@ class AuthRepositoryMock implements AuthRepository {
       }
 
       // Get current user from storage
-      final currentUser = Storage.user;
+      final currentUser = await getUser();
       if (currentUser == null) {
         // This shouldn't happen as isLoggedIn() should have returned false
         logger.e('[AuthRepositoryMock] User is null'

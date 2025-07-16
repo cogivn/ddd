@@ -53,7 +53,7 @@ class AuthPage extends ConsumerWidget {
         // Prevent resizing when keyboard appears to avoid UI jumps
         // This is a UI/UX optimization mentioned in performance tips
         resizeToAvoidBottomInset: false,
-        appBar: BaseballAppBar(
+        appBar: BaseAppBar(
           titleText: context.s.login,
           // Using AutoLeadingButton for intelligent back navigation
           // It automatically handles nested routes and tabs better than the standard BackButton

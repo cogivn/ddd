@@ -9,5 +9,9 @@
   "auth_forgot_password": "忘记密码？",
   "auth_login_button": "登录",
   "auth_login_title": "欢迎回来",
-  "auth_signup_prompt": "没有账号？立即注册"
+  "auth_signup_prompt": "没有账号？立即注册",
+  "common_phone_required": "需要电话号码",
+  "common_password_required": "需要密码",
+  "common_password_show": "显示",
+  "common_password_hide": "隐藏"
 } 

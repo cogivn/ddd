@@ -27,3 +27,4 @@ Thumbs.db
 build/
 pubspec.lock
 .pub/
+bricks/ddd/hooks/.dart_tool

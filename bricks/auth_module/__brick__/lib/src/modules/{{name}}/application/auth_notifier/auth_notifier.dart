@@ -84,7 +84,7 @@ class AuthNotifier extends Notifier<AuthState> {
     if (isAuthenticated) {
       // If user is authenticated, get current user from storage
       // This is safe because isLoggedIn() ensures both user data and token exist
-      final currentUser = Storage.user;
+      final currentUser = await _repository.getUser();
 
       /// refreshing the user data in background.
       /// Will be notified by the event bus

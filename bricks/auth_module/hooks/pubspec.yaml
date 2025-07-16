@@ -4,6 +4,7 @@ environment:
   sdk: ^3.5.4
 
 dependencies:
+  path: ^1.9.1
   mason:
     git:
       url: https://github.com/felangel/mason

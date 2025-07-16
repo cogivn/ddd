@@ -5,5 +5,4 @@ abstract class User {
   String get avatar;
 
   Map<String, dynamic> toJson();
-  User fromJson(Map<String, dynamic> json);
 }

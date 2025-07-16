@@ -21,11 +21,16 @@ void mergeKeys(Map<String, dynamic> data, Map<String, dynamic> keys) {
 }
 
 void main() async {
-  // Lấy keys từ bricks/auth_module/l10n
-  final keysEn = await readKeysFile('bricks/auth_module/l10n/auth_l10n_keys.arb');
-  final keysHans = await readKeysFile('bricks/auth_module/l10n/auth_l10n_keys_zh_Hans.arb');
-  final keysHant = await readKeysFile('bricks/auth_module/l10n/auth_l10n_keys_zh_Hant.arb');
-  final l10nDir = Directory('assets/l10n');
+  // Lấy đường dẫn thực tế của script
+  final scriptDir = File(Platform.script.toFilePath()).parent.path;
+
+  // Lấy keys từ bricks/auth_module/l10n (dựa trên vị trí script)
+  final keysEn = await readKeysFile('$scriptDir/l10n/auth_l10n_keys.arb');
+  final keysHans = await readKeysFile('$scriptDir/l10n/auth_l10n_keys_zh_Hans.arb');
+  final keysHant = await readKeysFile('$scriptDir/l10n/auth_l10n_keys_zh_Hant.arb');
+
+  // Lấy assets/l10n dựa trên current working directory
+  final l10nDir = Directory('${Directory.current.path}/assets/l10n');
 
   if (!await l10nDir.exists()) {
     print('assets/l10n directory not found!');

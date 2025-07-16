@@ -14,6 +14,7 @@ import '../../../../core/infrastructure/datasources/local/storage.dart';
 import '../../../../core/infrastructure/datasources/remote/api/api_client.dart';
 import '../../domain/interfaces/auth_repository.dart';
 import '../../domain/models/auth_request.dart';
+import '../dtos/user_dto.dart';
 import '../service/auth_client.dart';
 
 @LazySingleton(as: AuthRepository, env: AppEnvironment.environments)
@@ -89,7 +90,7 @@ class AuthRepositoryImpl implements AuthRepository {
     // in repository implementations
     logger.i('[AuthRepository] Saving user data to storage '
         'for user: ${user.id}');
-    await Storage.setUser(user);
+    await Storage.setUser(user.toJson());
   }
 
   @override
@@ -108,7 +109,7 @@ class AuthRepositoryImpl implements AuthRepository {
     if (!await isLoggedIn()) {
       return null;
     }
-    return Storage.user;
+    return UserDTO.fromJson(Storage.user);
   }
 
   @override
@@ -133,13 +134,31 @@ class AuthRepositoryImpl implements AuthRepository {
 
   @override
   Future<bool> isLoggedIn() async {
-    try {
-      final user = Storage.user;
-      final token = await Storage.accessToken;
-      return user != null && token != null && token.isNotEmpty;
-    } catch (e) {
-      logger.e('[AuthRepository] Error checking login status: $e');
-      return false;
+    // Follows MCP-ddd-repository-pattern: Implement repository
+    // methods in infrastructure layer
+    logger.i('[AuthRepository] Checking mock login status');
+
+    final user = UserDTO.fromJson(Storage.user);
+    final token = await Storage.accessToken;
+
+    // Both user data and access token must exist
+    if (user.isValid() && token != null && token.isNotEmpty) {
+      logger.i('[AuthRepository] Mock user is logged in');
+      return true;
     }
+
+    // If only one exists, clear it for consistency
+    if (user.isValid() && (token == null || token.isEmpty)) {
+      logger.w('[AuthRepository] Mock user data exists but token'
+          ' missing, clearing session');
+      await _authService.logout();
+    } else if ((user.isValid()) && token != null && token.isNotEmpty) {
+      logger.w('[AuthRepository] Token exists but user'
+          ' data missing, clearing session');
+      await _authService.logout();
+    }
+
+    logger.i('[AuthRepository] User is not logged in');
+    return false;
   }
 }
