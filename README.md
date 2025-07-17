@@ -24,7 +24,7 @@ The generated structure follows best practices for separation of concerns with d
 - Configures state management boilerplate based on your preferred solution
 - Implements mock repositories for testing
 - Provides consistent error handling with API error responses
-- **Supports fast generation of common modules:** `auth`, `reset`, `otp`, `register`, ...
+- **Supports fast generation of common modules:** `auth`, `reset`, `otp`, `register`, `change_email`, `change_password`, `delete_account`, ...
 
 ## Prerequisites
 
@@ -155,7 +155,7 @@ mason make ddd --name newsfeed --provider bloc -o lib/features
 
 ## Generating Common Modules (auth, reset, otp, register, ...)
 
-To speed up development, we provide ready-to-use bricks for common modules such as `auth`, `reset`, `otp`, `register`, etc. These bricks follow the same DDD structure and best practices, but are pre-configured for their specific use cases.
+To speed up development, we provide ready-to-use bricks for common modules such as `auth`, `reset`, `otp`, `register`, `change_email`, `change_password`, `delete_account`, etc. These bricks follow the same DDD structure and best practices, but are pre-configured for their specific use cases.
 
 ### Supported Modules
 
@@ -167,7 +167,7 @@ To speed up development, we provide ready-to-use bricks for common modules such 
 | register         | User registration          | No                  |                               |
 | change_email     | Change email address       | No                  |                               |
 | change_password  | Change password            | No                  |                               |
-| delete_account   | Delete user account        | No                  |                               |
+| delete_account   | Delete user account        | Yes                 | Includes merge_l10n_keys.dart |
 
 ### How to Use
 

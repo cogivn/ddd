@@ -1,0 +1,19 @@
+{
+  "auth_phone_empty": "电话号码不能为空",
+  "auth_phone_required": "需要电话号码",
+  "auth_phone_invalid_format": "电话号码格式无效",
+  "auth_password_required": "需要密码",
+  "auth_password_show": "显示",
+  "auth_password_hide": "隐藏",
+  "auth_password_empty": "密码不能为空",
+  "reset_passwords_do_not_match": "两次输入的密码不一致",
+  "reset_generic_input_error": "输入有误，请重试。",
+  "reset_password": "新密码",
+  "reset_password_hint": "请输入新密码",
+  "reset_confirm_password": "确认密码",
+  "reset_confirm_password_hint": "请再次输入新密码",
+  "reset_submit": "提交",
+  "otp_verification": "验证码验证",
+  "reset_create_new_password": "创建新密码",
+  "reset_password_instructions": "请输入并确认您的新密码。"
+}

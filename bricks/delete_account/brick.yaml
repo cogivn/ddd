@@ -28,6 +28,6 @@ environment:
 vars:
   name:
     type: string
-    description: Your name
-    default: Dash
-    prompt: What is your name?
+    description: "Enter the name of the Delete Account module (default: reset)"
+    default: delete_account
+    prompt: "Enter your Delete Account name"

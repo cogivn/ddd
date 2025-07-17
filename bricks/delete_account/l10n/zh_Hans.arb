@@ -1,0 +1,12 @@
+{
+  "delete_account_confirm": "确认删除",
+  "settings_account_management": "账户管理",
+  "delete_account_reason_title": "删除原因",
+  "delete_account_reason_confirm_title": "请选择删除账户的原因",
+  "delete_account_type_delete": "删除账户",
+  "delete_continue": "继续",
+  "delete_account_notice": "删除您的账户是永久性的，无法撤销。您的所有数据都将被移除。",
+  "delete_account_reason_label": "原因",
+  "delete_account_reason_hint": "请输入您删除账户的原因",
+  "delete_account_reason_invalid": "请提供有效的账户删除原因"
+}

@@ -1,0 +1,19 @@
+{
+  "auth_phone_empty": "Phone number cannot be empty",
+  "auth_phone_required": "A phone number is required",
+  "auth_phone_invalid_format": "Invalid phone number format",
+  "auth_password_required": "Password is required",
+  "auth_password_show": "Show",
+  "auth_password_hide": "Hide",
+  "auth_password_empty": "Password cannot be empty",
+  "reset_passwords_do_not_match": "Passwords do not match",
+  "reset_generic_input_error": "There was an error with your input. Please try again.",
+  "reset_password": "New Password",
+  "reset_password_hint": "Enter your new password",
+  "reset_confirm_password": "Confirm Password",
+  "reset_confirm_password_hint": "Re-enter your new password",
+  "reset_submit": "Submit",
+  "otp_verification": "OTP Verification",
+  "reset_create_new_password": "Create New Password",
+  "reset_password_instructions": "Please enter and confirm your new password."
+}

@@ -9,9 +9,15 @@
       <excludeFolder url="file://$MODULE_DIR$/bricks/auth/hooks/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/bricks/auth/hooks/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/bricks/auth/hooks/build" />
+      <excludeFolder url="file://$MODULE_DIR$/bricks/delete_account/hooks/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/bricks/delete_account/hooks/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/bricks/delete_account/hooks/build" />
       <excludeFolder url="file://$MODULE_DIR$/bricks/otp/hooks/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/bricks/otp/hooks/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/bricks/otp/hooks/build" />
+      <excludeFolder url="file://$MODULE_DIR$/bricks/register/hooks/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/bricks/register/hooks/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/bricks/register/hooks/build" />
       <excludeFolder url="file://$MODULE_DIR$/bricks/reset/hooks/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/bricks/reset/hooks/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/bricks/reset/hooks/build" />

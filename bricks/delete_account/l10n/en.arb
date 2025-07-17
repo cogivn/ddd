@@ -1,0 +1,12 @@
+{
+  "delete_account_confirm": "Confirm Deletion",
+  "settings_account_management": "Account Management",
+  "delete_account_reason_title": "Reason for Deletion",
+  "delete_account_reason_confirm_title": "Please select a reason for deleting your account",
+  "delete_account_type_delete": "Delete Account",
+  "delete_continue": "Continue",
+  "delete_account_notice": "Deleting your account is permanent and cannot be undone. All your data will be removed.",
+  "delete_account_reason_label": "Reason",
+  "delete_account_reason_hint": "Please enter your reason for deleting your account",
+  "delete_account_reason_invalid": "Please provide a valid reason for account deletion"
+}
