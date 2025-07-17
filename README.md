@@ -24,6 +24,7 @@ The generated structure follows best practices for separation of concerns with d
 - Configures state management boilerplate based on your preferred solution
 - Implements mock repositories for testing
 - Provides consistent error handling with API error responses
+- **Supports fast generation of common modules:** `auth`, `reset`, `otp`, `register`, ...
 
 ## Prerequisites
 
@@ -152,6 +153,66 @@ Specify a custom output directory with the `-o` option:
 mason make ddd --name newsfeed --provider bloc -o lib/features
 ```
 
+## Generating Common Modules (auth, reset, otp, register, ...)
+
+To speed up development, we provide ready-to-use bricks for common modules such as `auth`, `reset`, `otp`, `register`, etc. These bricks follow the same DDD structure and best practices, but are pre-configured for their specific use cases.
+
+### Supported Modules
+
+| Module           | Description                | Localization Support | Notes                         |
+|------------------|----------------------------|---------------------|-------------------------------|
+| auth             | Authentication flow        | Yes                 | Includes merge_l10n_keys.dart |
+| reset            | Password reset flow        | Yes                 | Includes merge_l10n_keys.dart |
+| otp              | OTP verification           | Yes                 | Includes merge_l10n_keys.dart |
+| register         | User registration          | No                  |                               |
+| change_email     | Change email address       | No                  |                               |
+| change_password  | Change password            | No                  |                               |
+| delete_account   | Delete user account        | No                  |                               |
+
+### How to Use
+
+1. Add the desired brick to your `mason.yaml` (if not already present):
+
+```yaml
+bricks:
+  auth:
+    path: bricks/auth
+  reset:
+    path: bricks/reset
+  otp:
+    path: bricks/otp
+  register:
+    path: bricks/register
+  change_email:
+    path: bricks/change_email
+  change_password:
+    path: bricks/change_password
+  delete_account:
+    path: bricks/delete_account
+```
+
+2. Run `mason get` to fetch the bricks:
+
+```bash
+mason get
+```
+
+3. Generate the module using the corresponding brick. For example, to generate the `auth` module:
+
+```bash
+mason make auth
+```
+
+You may be prompted for additional options depending on the brick (e.g., module name, localization, etc.).
+
+> **Tip:** For bricks with localization (auth, otp, reset), after generation, run the provided script to merge localization keys if needed. Example:
+>
+> ```bash
+> dart bricks/auth/merge_l10n_keys.dart
+> ```
+
+Repeat the process for other modules (`reset`, `otp`, `register`, ...), replacing `auth` with the desired module name.
+
 ## Generated Structure
 
 For a module named `post`, the brick will generate:
@@ -200,4 +261,3 @@ We welcome contributions! If you find bugs or have suggestions for improvements,
 ## License
 
 This project is licensed under the Apache License 2.0 - see the LICENSE file for details.
-

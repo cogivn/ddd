@@ -1,6 +1,6 @@
 {
   "auth_phone_empty": "电话号码不能为空",
-    "auth_phone_required": "需要电话号码",
+  "auth_phone_required": "需要电话号码",
   "auth_phone_invalid_format": "电话号码格式无效",
   "otp_error_invalid_phone": "无效的电话号码",
   "otp_error_code_invalid": "验证码无效",

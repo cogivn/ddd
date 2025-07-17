@@ -1,8 +1,8 @@
-name: auth_module
+name: auth
 description: A new brick created with the Mason CLI.
 
 # Sau khi mason make, hãy chạy:
-# dart bricks/auth_module/merge_l10n_keys.dart
+# dart bricks/auth/merge_l10n_keys.dart
 # để tự động thêm các localization keys vào các file assets/l10n/intl_*.arb
 
 # The following defines the brick repository url.

@@ -24,10 +24,10 @@ void main() async {
   // Lấy đường dẫn thực tế của script
   final scriptDir = File(Platform.script.toFilePath()).parent.path;
 
-  // Lấy keys từ bricks/auth_module/l10n (dựa trên vị trí script)
-  final keysEn = await readKeysFile('$scriptDir/l10n/auth_l10n_keys.arb');
-  final keysHans = await readKeysFile('$scriptDir/l10n/auth_l10n_keys_zh_Hans.arb');
-  final keysHant = await readKeysFile('$scriptDir/l10n/auth_l10n_keys_zh_Hant.arb');
+  // Lấy keys từ bricks/auth/l10n (dựa trên vị trí script)
+  final keysEn = await readKeysFile('$scriptDir/l10n/en.arb');
+  final keysHans = await readKeysFile('$scriptDir/l10n/zh_Hans.arb');
+  final keysHant = await readKeysFile('$scriptDir/l10n/zh_Hant.arb');
 
   // Lấy assets/l10n dựa trên current working directory
   final l10nDir = Directory('${Directory.current.path}/assets/l10n');
