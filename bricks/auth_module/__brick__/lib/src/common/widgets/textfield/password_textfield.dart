@@ -185,7 +185,7 @@ class PasswordTextField extends HookWidget {
   /// Default validator for password input if none provided
   String? _defaultValidator(BuildContext context, String? value) {
     if (value == null || value.isEmpty) {
-      return context.s.common_password_required;
+      return context.s.auth_password_required;
     }
 
     return null;
@@ -226,8 +226,8 @@ class _SuffixIcon extends StatelessWidget {
 
     // Get localized accessibility label based on current state
     final String tooltipText = obscureText.value
-        ? context.s.common_password_show
-        : context.s.common_password_hide;
+        ? context.s.auth_password_show
+        : context.s.auth_password_hide;
 
     return IconButton(
       onPressed: () => obscureText.value = !obscureText.value,

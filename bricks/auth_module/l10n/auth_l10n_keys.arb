@@ -10,8 +10,8 @@
   "auth_login_button": "Login",
   "auth_login_title": "Welcome Back",
   "auth_signup_prompt": "Don't have an account? Sign up now",
-  "common_phone_required": "Phone number is required",
-  "common_password_required": "Password is required",
-  "common_password_show": "Show",
-  "common_password_hide": "Hide"
+  "auth_phone_required": "Phone number is required",
+  "auth_password_required": "Password is required",
+  "auth_password_show": "Show",
+  "auth_password_hide": "Hide"
 } 

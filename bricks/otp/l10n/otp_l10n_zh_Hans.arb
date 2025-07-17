@@ -1,0 +1,15 @@
+{
+  "auth_phone_empty": "电话号码不能为空",
+    "auth_phone_required": "需要电话号码",
+  "auth_phone_invalid_format": "电话号码格式无效",
+  "otp_error_invalid_phone": "无效的电话号码",
+  "otp_error_code_invalid": "验证码无效",
+  "otp_error_server": "服务器错误",
+  "otp_phone_verification": "手机验证",
+  "otp_phone_number": "手机号码",
+  "otp_send_code": "发送验证码",
+  "otp_phone_verification_instructions": "请输入收到的验证码以验证您的手机号码。",
+  "otp_verification_instructions": "请输入验证码。",
+  "otp_resend_code_with_timer": "{time}秒后可重新发送验证码",
+  "otp_invalid_code": "无效的验证码"
+}

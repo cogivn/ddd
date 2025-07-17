@@ -1,11 +1,12 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:sizing/sizing.dart';
 import 'package:focus_detector_v2/focus_detector_v2.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../../../generated/colors.gen.dart';
 import '../../../../common/extensions/build_context_x.dart';
+import '../../../../common/extensions/size_x.dart';
 import '../../../../common/widgets/widgets.dart';
 import '../../application/auth_notifier/auth_notifier.dart';
 import '../hooks/auth_hooks.dart';

@@ -1,0 +1,15 @@
+{
+  "auth_phone_empty": "電話號碼不能為空",
+  "auth_phone_required": "需要電話號碼",
+  "auth_phone_invalid_format": "電話號碼格式無效",
+  "otp_error_invalid_phone": "無效的電話號碼",
+  "otp_error_code_invalid": "驗證碼無效",
+  "otp_error_server": "伺服器錯誤",
+  "otp_phone_verification": "手機驗證",
+  "otp_phone_number": "手機號碼",
+  "otp_send_code": "發送驗證碼",
+  "otp_phone_verification_instructions": "請輸入收到的驗證碼以驗證您的手機號碼。",
+  "otp_verification_instructions": "請輸入驗證碼。",
+  "otp_resend_code_with_timer": "{time}秒後可重新發送驗證碼",
+  "otp_invalid_code": "無效的驗證碼"
+}

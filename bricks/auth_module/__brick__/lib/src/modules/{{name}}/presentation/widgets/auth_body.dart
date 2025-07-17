@@ -9,7 +9,7 @@ class AuthBody extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Container(
-      padding: EdgeInsets.all(24.r),
+      padding: EdgeInsets.all(24.ss),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         spacing: 30,
@@ -40,7 +40,7 @@ class _LoginHeader extends StatelessWidget {
           context.s.auth_login_title,
           style: context.textTheme.bold.copyWith(
             color: ColorName.secondary,
-            fontSize: 28.sp,
+            fontSize: 28.fss,
           ),
         ),
         // Using LayoutBuilder for responsive design
@@ -49,7 +49,7 @@ class _LoginHeader extends StatelessWidget {
           builder: (ctx, constraint) => Container(
             width: constraint.maxWidth * .6,
             color: ColorName.secondary,
-            height: 3.h,
+            height: 3.ss,
           ),
         ),
       ],

@@ -1,0 +1,15 @@
+{
+  "auth_phone_empty": "Phone number cannot be empty",
+  "auth_phone_required": "A phone number is required",
+  "auth_phone_invalid_format": "Invalid phone number format",
+  "otp_error_invalid_phone": "Invalid phone number",
+  "otp_error_code_invalid": "Invalid verification code",
+  "otp_error_server": "Server error",
+  "otp_phone_verification": "Phone verification",
+  "otp_phone_number": "Phone number",
+  "otp_send_code": "Send code",
+  "otp_phone_verification_instructions": "Please enter the code you received to verify your phone number.",
+  "otp_verification_instructions": "Please enter the verification code.",
+  "otp_resend_code_with_timer": "Resend code in {time}s",
+  "otp_invalid_code": "Invalid code"
+}
