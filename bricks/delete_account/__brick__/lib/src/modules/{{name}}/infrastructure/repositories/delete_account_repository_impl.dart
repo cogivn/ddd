@@ -48,7 +48,7 @@ class DeleteAccountRepositoryImpl implements DeleteAccountRepository {
     return _client.deleteAccount(request, token).tryGet((response) async {
       logger.i('[DeleteAccountRepository] Account deletion successful');
       await _authService.logout();
-      // Notify all listeners about the logout event
+      // Notify all listeners about the logout events
       _authEventBus.notifyUnauthorized();
       // Return success with a DeleteAccount DTO
       return DeleteAccountDto(

@@ -15,5 +15,14 @@
   "reset_submit": "提交",
   "otp_verification": "驗證碼驗證",
   "reset_create_new_password": "建立新密碼",
-  "reset_password_instructions": "請輸入並確認您的新密碼。"
+  "reset_password_instructions": "請輸入並確認您的新密碼。",
+  "register_passwords_do_not_match": "兩次輸入的密碼不一致",
+  "register_generic_input_error": "輸入有誤，請重試。",
+  "register_title_full": "註冊新帳號",
+  "register_title": "註冊",
+  "register_password": "密碼",
+  "register_last_step_message": "這是最後一步，請在提交前確認您的資訊。",
+  "register_confirm_password": "確認密碼",
+  "auth_confirm_password_hint": "請再次輸入您的密碼",
+  "register_submit": "提交"
 }

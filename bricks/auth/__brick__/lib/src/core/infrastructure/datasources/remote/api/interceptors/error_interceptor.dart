@@ -86,12 +86,12 @@ class ErrorInterceptor extends InterceptorsWrapper {
   }
 
   /// Handle force update errors by notifying the app
-  // Future<void> _notifyToForceUpdate(AppEvent event) async {
+  // Future<void> _notifyToForceUpdate(AppEvent events) async {
   //   // Notify the app about the force update requirement
-  //   ForceUpdateConfig.instance.shouldSkipForceUpdate(event.endpoint)
+  //   ForceUpdateConfig.instance.shouldSkipForceUpdate(events.endpoint)
   //       ? logger.w('Skipping force update notification'
-  //       ' for endpoint: ${event.endpoint}')
-  //       : _appEventBus.emit(event);
+  //       ' for endpoint: ${events.endpoint}')
+  //       : _appEventBus.emit(events);
   // }
 
   /// Checks if the response data is a Map
@@ -140,11 +140,11 @@ class ErrorInterceptor extends InterceptorsWrapper {
       // Handle force update errors
       final dataJson = data['data'] as Map<String, dynamic>? ?? {};
       final result = MobileVersionData.fromJson(dataJson);
-      final event = ForceUpdateRequiredEvent.fromModel(
+      final events = ForceUpdateRequiredEvent.fromModel(
         model: result.mobileVersion,
         endpoint: endpoint ?? '',
       );
-      _notifyToForceUpdate(event);
+      _notifyToForceUpdate(events);
 
       return ApiError.version(
         code: 426,

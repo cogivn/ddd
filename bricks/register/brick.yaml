@@ -28,6 +28,6 @@ environment:
 vars:
   name:
     type: string
-    description: Your name
-    default: Dash
-    prompt: What is your name?
+    description: "Enter the name of the Register module (default: reset)"
+    default: register
+    prompt: "Enter your Register name"

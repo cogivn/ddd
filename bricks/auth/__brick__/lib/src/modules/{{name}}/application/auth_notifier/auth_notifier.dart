@@ -87,7 +87,7 @@ class AuthNotifier extends Notifier<AuthState> {
       final currentUser = await _repository.getUser();
 
       /// refreshing the user data in background.
-      /// Will be notified by the event bus
+      /// Will be notified by the events bus
       _repository.me();
       if (currentUser != null) {
         logger.i('[AuthNotifier] User is already authenticated');
@@ -106,7 +106,7 @@ class AuthNotifier extends Notifier<AuthState> {
     return await _repository.isLoggedIn();
   }
 
-  /// Setup event listeners for authentication and user updates
+  /// Setup events listeners for authentication and user updates
   void _setupEventListeners() {
     // Listen for authentication success events (login/registration)
     // Follows MCP-ddd-application-layer: Process domain events in application layer
@@ -126,25 +126,25 @@ class AuthNotifier extends Notifier<AuthState> {
     });
   }
 
-  /// Handle authentication event (login/registration)
+  /// Handle authentication events (login/registration)
   void _handleAuthenticationEvent(User user) async {
     logger.i('[AuthNotifier] Received authentication '
-        'success event for user: ${user.id}');
+        'success events for user: ${user.id}');
 
     // Use repository to save user data and access token
     // Follows MCP-ddd-repository-pattern: Use repository for data persistence
     _repository.saveUserData(user);
-    // The router will be notified by the event bus and wait for
+    // The router will be notified by the events bus and wait for
     // the revalidation success before call the pop action
     await 100.milliseconds.delay;
     // Update auth state to authenticated
     state = state.onAuthenticated(user);
   }
 
-  /// Handle user profile update event
+  /// Handle user profile update events
   void _handleUserUpdatedEvent(User user) {
     logger.i('[AuthNotifier] Received user profile update '
-        'event for user: ${user.id}');
+        'events for user: ${user.id}');
 
     // Use repository to save updated user data
     // Follows MCP-ddd-repository-pattern: Use repository for data persistence

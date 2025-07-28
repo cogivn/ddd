@@ -21,6 +21,12 @@
       <excludeFolder url="file://$MODULE_DIR$/bricks/reset/hooks/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/bricks/reset/hooks/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/bricks/reset/hooks/build" />
+      <excludeFolder url="file://$MODULE_DIR$/bricks/change_email/hooks/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/bricks/change_email/hooks/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/bricks/change_email/hooks/build" />
+      <excludeFolder url="file://$MODULE_DIR$/bricks/change_password/hooks/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/bricks/change_password/hooks/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/bricks/change_password/hooks/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
