@@ -1,6 +1,5 @@
 part of '{{name.snakeCase()}}_notifier.dart';
 
-@frx
 @freezed
 abstract class {{name.pascalCase()}}Status with _${{name.pascalCase()}}Status {
   const factory {{name.pascalCase()}}Status.initial() = _InitialStatus;

@@ -1,16 +1,14 @@
-import 'package:frx_annotation/frx_annotation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:injectable/injectable.dart';
 
 import '../../../../common/utils/getit_utils.dart';
-import '../../../../core/infrastructure/datasources/remote/api/base/api_error.dart';
+import '../../../../core/domain/errors/api_error.dart';
 import '../../domain/entities/{{name.snakeCase()}}.dart';
 import '../../domain/repositories/{{name.snakeCase()}}_repository.dart';
 
 part '{{name.snakeCase()}}_state.dart';
 part '{{name.snakeCase()}}_notifier.freezed.dart';
-part '{{name.snakeCase()}}_notifier.g.dart';
 
 @ProviderFor({{name.pascalCase()}}Notifier)
 final {{name.camelCase()}}Provider = AutoDisposeNotifierProvider<{{name.pascalCase()}}Notifier, {{name.pascalCase()}}State>(
